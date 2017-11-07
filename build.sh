@@ -1,1 +1,1 @@
-docker build -t liaohuqiu/simple-obfs ./
+docker build -t simple-obfs ./
