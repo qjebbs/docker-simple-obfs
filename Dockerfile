@@ -13,7 +13,6 @@ RUN set -ex \
                           libsodium \
                           mbedtls \
                           pcre \
-                          c-ares \
     && apk add --no-cache \
                --virtual TMP autoconf \
                              automake \
@@ -28,7 +27,6 @@ RUN set -ex \
                              openssl-dev \
                              pcre-dev \
                              tar \
-                             c-ares-dev \
                              git \
     && git clone $SIMPLE_OBFS_URL \
     && cd $SIMPLE_OBFS_DIR \
