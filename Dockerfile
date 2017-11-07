@@ -3,7 +3,7 @@ LABEL maintainer="Leo <liaohuqiu@gmail.com>"
 
 # use git checkout instead of downloading tar ball because:
 #   https://github.com/shadowsocks/simple-obfs/issues/58#issuecomment-288294991
-ENV SIMPLE_OBFS_TAG v0.0.4
+
 ENV SIMPLE_OBFS_URL https://github.com/shadowsocks/simple-obfs.git
 ENV SIMPLE_OBFS_DIR simple-obfs
 
@@ -32,7 +32,7 @@ RUN set -ex \
                              git \
     && git clone $SIMPLE_OBFS_URL \
     && cd $SIMPLE_OBFS_DIR \
-        && git checkout tags/$SIMPLE_OBFS_TAG \
+        && git checkout master \
         && git submodule update --init --recursive \
         && ./autogen.sh \
         && ./configure --disable-documentation \
